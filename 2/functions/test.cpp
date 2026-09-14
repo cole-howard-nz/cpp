@@ -4,14 +4,13 @@ float multiply(float a, float b) {
     return a * b;
 }
 
-void returnNothing() {
-    return;
-}
-
 void printMessage(float value) {
     std::cout << "The result of multiplying is " << value << ".\n";
 }
 
+void returnNothing() {
+    return;
+}
 
 int main() {
     int a { };
@@ -21,7 +20,7 @@ int main() {
     std::cin >> a >> b;
 
     printMessage(multiply(a, b));
-    
+
     returnNothing();
     returnNothing();
     returnNothing();
