@@ -18,7 +18,8 @@
 				"-Wsign-conversion",
 				"${file}",
 				"-o",
-				"${fileDirname}/${fileBasenameNoExtension}"
+				"${fileDirname}/${fileBasenameNoExtension}",
+				"-I./source/includes"
 			],
 			"options": {
 				"cwd": "${fileDirname}"
