@@ -32,6 +32,33 @@
 				"isDefault": true
 			},
 			"detail": "compiler: /usr/bin/g++"
+		},
+		{
+			"type": "shell",
+			"label": "C/C++: g++ build folder",
+			"command": "/usr/bin/g++",
+			"args": [
+				"-std=c++20",
+				"-fdiagnostics-color=always",
+				"-g",
+				"-pedantic-errors",
+				"-Wall",
+				"-Weffc++",
+				"-Werror",
+				"-Wextra",
+				"-Wconversion",
+				"-Wsign-conversion",
+				"${fileDirname}/*.cpp",
+				"-o",
+				"${fileDirname}/${fileDirnameBasename}"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"detail": "compiler: /usr/bin/g++ (builds every .cpp in the active file's folder)"
 		}
 	]
 }
