@@ -9,12 +9,19 @@ void ignore_line() {
 }
 
 double get_decimal_number(std::string_view message) {
-    std::cout << message;
-    double input { };
-    std::cin >> input;
-    ignore_line();
+    while (true) {
+        std::cout << message;
+        double input { };
+        std::cin >> input;
+        
+        bool success { std::cin };
+        std::cin.clear();
+        ignore_line();
 
-    return input;
+        if (success) {
+            return input;
+        }
+    }
 }
 
 char get_operator() {
